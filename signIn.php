@@ -1,5 +1,5 @@
 <?php 
-require_once 'functions.php';
+//require_once 'functions.php';
 ?>
 
 <html lang="fr">
@@ -9,28 +9,31 @@ require_once 'functions.php';
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="signInTreatment.php" method="post">
-        <div class="imgcontainer">
-            <img src="" alt="" class="">
-        </div>
+    <div class="container">
+        <h1 class="titleForm">LOGIN</h1>
+        <form action="signInTreatment.php" method="POST">
+            <div class="containerForm">
+                <div class="champ">
+                    <input type="text" class="input" placeholder="User Name" name="login" id="login" required>
+                </div>
+                <div class="champ">
+                    <input class="input" type="password" placeholder="Password" name="password"  id="password" required>
+                </div>
+                <div>
+                    <button class="submit" type="submit">Login</button>
+                    <label class="checkbox">
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                </div>
+                
+                
+            </div>
 
-        <div class="container">
-            <label for="login"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="login" id="login" required>
-
-            <label for="password"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password"  id="password" required>
-
-            <button type="submit">Login</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-    </form>    
+            <div class="containerHelp">
+                <button class="cancel" type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>  
+    </div>  
 </body>
 </html>
